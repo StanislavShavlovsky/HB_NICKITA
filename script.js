@@ -316,7 +316,7 @@ const showQuestCompletion = () => {
     }, 1000);
 };
 const showQRCode = () => {
-    alert('🎁 QR-код с подарком будет здесь!\n\nПока что это заглушка. Вставь свой QR-код позже!');
+    alert('🎁 QR-код с подарком будет здесь!\n\nПока что это заглушка.');
 };
 const style = document.createElement('style');
 style.textContent = `
@@ -401,11 +401,11 @@ function showTestimonial(idx) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ... existing code ...
+  
   renderTestimonial(testimonialIndex);
 });
 
-// Анимация для слайдера
+
 const sliderStyle = document.createElement('style');
 sliderStyle.textContent = `
 #testimonial-slider.fade-in { animation: fadeInTestimonial 0.4s; }
