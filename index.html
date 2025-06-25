@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДР Темщика</title>
+    <link rel="icon" type="image/png" href="assets/nikita_pechenka.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parallax-bg"></div>
+    <div class="hero-bg-intro" id="heroBgIntro"></div>
+    <div id="introOverlay"></div>
+    <div id="mainSiteContent">
+        <section class="hero" id="hero">
+            <div class="hero-content" id="heroContent">
+                <div class="hero-main-content" id="heroMainContent">
+                    <h1 class="hero-title">С Днем Рождения, <br><span>Никита!</span> 🎉</h1>
+                    <p class="hero-subtitle">26 июня 2006 года - день, когда мир стал ярче!</p>
+                    <div class="age-counter" id="ageCounter">Тебе уже ... лет!</div>
+                    <div class="action-buttons">
+                        <button class="action-btn" onclick="createConfetti()">
+                            <i class="fas fa-birthday-cake"></i> Запустить конфетти!
+                        </button>
+                        <button class="action-btn" onclick="showSpecialMessage()">
+                            <i class="fas fa-heart"></i> Особое пожелание
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator" onclick="scrollToSection('gallery')">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <img src="assets/nikita_pechenka.png" class="hidden-nikita" style="top: 15%; left: 5%; width: 45px; height: 45px;" onclick="findNikita(this, 1)" alt="Найди Никиту!">
+        </section>
+        <div id="siteBody">
+            <nav class="nav">
+                <div class="nav-content">
+                    <div class="nav-logo">🎂 Никита</div>
+                    <ul class="nav-links">
+                        <li><a onclick="scrollToSection('hero')">Главная</a></li>
+                        <li><a onclick="scrollToSection('gallery')">Фото</a></li>
+                        <li><a onclick="scrollToSection('videos')">Видео</a></li>
+                        <li><a onclick="scrollToSection('past-wishes')">Поздравления</a></li>
+                        <li><a onclick="scrollToSection('facts')">Факты</a></li>
+                        <li><a onclick="scrollToSection('friends')">Друзья</a></li>
+                        <li><a onclick="scrollToSection('wishes')">Пожелания</a></li>
+                        <li><a onclick="showQuestProgress()" class="quest-btn">🎯 Квест</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="section" id="gallery">
+                <h2 class="section-title">📸 Фотогалерея</h2>
+                <div class="photo-gallery">
+                    <div class="gallery-container">
+                        <img src="assets/5393087565281753297.jpg" class="gallery-slide active" alt="Никита">
+                        <img src="assets/5393087565281753298.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753299.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753300.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753301.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753302.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753303.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753304.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753305.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753306.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753307.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753308.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753309.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753310.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753311.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753312.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753313.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753314.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753315.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753316.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753317.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753318.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753319.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753320.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753321.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753322.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753323.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753324.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753325.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753326.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753327.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753328.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753329.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753330.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753331.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753332.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753333.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753334.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753336.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753337.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753338.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753339.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753340.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753341.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393087565281753342.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393287667808076064.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393308781867300402.jpg" class="gallery-slide" alt="Никита">
+                        <img src="assets/5393308781867300403.jpg" class="gallery-slide" alt="Никита">
+                        
+                        <button class="gallery-btn prev" onclick="changeSlide(-1)">❮</button>
+                        <button class="gallery-btn next" onclick="changeSlide(1)">❯</button>
+                        <img src="assets/nikita_pechenka.png" class="hidden-nikita" style="position: absolute; top: 50%; left: 0; width: 28px; height: 28px; transform: translateY(-50%); z-index: 2; opacity: 0.6;" onclick="findNikita(this, 2)" alt="Найди Никиту!">
+                    </div>
+                    <div class="gallery-nav" id="galleryNav"></div>
+                </div>
+            </section>
+
+            <section class="section" id="videos">
+                <h2 class="section-title">📺 Видеогалерея</h2>
+                <div class="video-gallery">
+                    <div class="video-grid">
+                        <div class="video-item" onclick="playVideo(this)">
+                            <video muted>
+                                <source src="assets/IMG_4699.MOV" type="video/mp4">
+                            </video>
+                            <div class="video-info">
+                                <i class="fas fa-play-circle"></i> Видео 1
+                            </div>
+                        </div>
+                        <div class="video-item" onclick="playVideo(this)">
+                            <video muted>
+                                <source src="assets/IMG_4709.MOV" type="video/mp4">
+                            </video>
+                            <div class="video-info">
+                                <i class="fas fa-play-circle"></i> Видео 2
+                            </div>
+                        </div>
+                        <div class="video-item" onclick="playVideo(this)">
+                            <video muted>
+                                <source src="assets/IMG_4710.MOV" type="video/mp4">
+                            </video>
+                            <div class="video-info">
+                                <i class="fas fa-play-circle"></i> Видео 3
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/nikita_pechenka.png" class="hidden-nikita" style="position: absolute; bottom: -10px; right: 10px; width: 36px; height: 36px; opacity: 0.7;" onclick="findNikita(this, 3)" alt="Найди Никиту!">
+                </div>
+            </section>
+
+            <section class="section" id="past-wishes">
+                <h2 class="section-title">🎬 Поздравления прошлых лет</h2>
+                <div class="video-gallery">
+                    <div class="video-grid">
+                        <div class="video-item" onclick="playVideo(this)">
+                            <video muted>
+                                <source src="assets/Pozdravlenie_1.MOV" type="video/mp4">
+                            </video>
+                            <div class="video-info">
+                                <i class="fas fa-play-circle"></i> Поздравление 2023
+                            </div>
+                        </div>
+                        <div class="video-item" onclick="playVideo(this)">
+                            <video muted>
+                                <source src="assets/Pozdravlenie_2.MOV" type="video/mp4">
+                            </video>
+                            <div class="video-info">
+                                <i class="fas fa-play-circle"></i> Поздравление 2024
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wishes-background">
+                        <div class="wishes-text">
+                            <h3>💝 Дорогие воспоминания</h3>
+                            <p>Вспомни прошлые поздравления — эти видео хранят самые тёплые моменты и эмоции, которые я вкладывал в них для поздравления тебя!</p>
+                        </div>
+                    </div>
+                    <img src="assets/nikita_pechenka.png" class="hidden-nikita" style="bottom: 15%; left: 20%; width: 50px; height: 50px;" onclick="findNikita(this, 4)" alt="Найди Никиту!">
+                </div>
+            </section>
+
+            <section class="section" id="facts">
+                <h2 class="section-title">🎯 Интересные факты</h2>
+                <div class="interactive-cards">
+                    <div class="card" onclick="showFact(this)" style="position: relative;">
+                        <div class="card-icon">🎬</div>
+                        <h3 class="card-title">Фильмы 2006</h3>
+                        <p class="card-content">В твой год рождения вышли "Пираты Карибского моря", "Тачки", "Казино Рояль" и "Отступники"!</p>
+                        <img src="assets/nikita_pechenka.png" class="hidden-nikita" style="position: absolute; left: 10px; bottom: 10px; width: 28px; height: 28px; opacity: 0.7; z-index: 2;" onclick="findNikita(this, 8)" data-id="8" alt="Найди Никиту!">
+                    </div>
+                    <div class="card" onclick="showFact(this)">
+                        <div class="card-icon">⭐</div>
+                        <h3 class="card-title">Звезды-ровесники</h3>
+                        <p class="card-content">26 июня 2006 года родились: актриса Милли Бобби Браун, певец Джейкоб Сарториус и многие другие талантливые люди!</p>
+                    </div>
+                    <div class="card" onclick="showFact(this)">
+                        <div class="card-icon">🚗</div>
+                        <h3 class="card-title">Автомобили 2006</h3>
+                        <p class="card-content">В 2006 году дебютировали: BMW 3-Series E90, Audi Q7, Mercedes-Benz S-Class W221 и Lexus LS 460!</p>
+                    </div>
+                    <div class="card" onclick="showFact(this)">
+                        <div class="card-icon">🎵</div>
+                        <h3 class="card-title">Музыка</h3>
+                        <p class="card-content">Топ-хиты: Shakira - "Hips Don't Lie", Nelly Furtado - "Promiscuous", Gnarls Barkley - "Crazy"</p>
+                    </div>
+                    <div class="card" onclick="showFact(this)">
+                        <div class="card-icon">💻</div>
+                        <h3 class="card-title">Технологии</h3>
+                        <p class="card-content">Появился Twitter! Первый твит был отправлен Джеком Дорси 21 марта 2006 года.</p>
+                    </div>
+                    <div class="card" onclick="showFact(this)">
+                        <div class="card-icon">⚽</div>
+                        <h3 class="card-title">Спорт</h3>
+                        <p class="card-content">Чемпионат мира по футболу в Германии. Италия стала чемпионом, обыграв Францию в финале.</p>
+                    </div>
+                    <div class="card" onclick="showFact(this)">
+                        <div class="card-icon">🌟</div>
+                        <h3 class="card-title">Особенный день</h3>
+                        <p class="card-content">26 июня - это Международный день борьбы с наркотиками и день рождения Никиты!</p>
+                    </div>
+                    <div class="card" onclick="showFact(this)">
+                        <div class="card-icon">🎂</div>
+                        <h3 class="card-title">Возраст</h3>
+                        <p class="card-content">Ты родился в год собаки по китайскому календарю! Это означает верность и дружелюбие.</p>
+                    </div>
+                    <div class="card" onclick="showFact(this)">
+                        <div class="card-icon">👶</div>
+                        <h3 class="card-title">Старший брат</h3>
+                        <p class="card-content">Ты на 2 месяца старше меня! Всегда был примером для подражания и лучшим другом!</p>
+                    </div>
+                </div>
+                <img src="assets/nikita_pechenka.png" class="hidden-nikita" style="top: 35%; right: 25%; width: 30px; height: 30px;" onclick="findNikita(this, 5)" alt="Найди Никиту!">
+            </section>
+
+            <section class="section" id="friends">
+                <h2 class="section-title">Отзывы друзей</h2>
+                <div id="testimonial-slider"></div>
+                <div id="testimonial-nav"></div>
+            </section>
+
+            <section class="section" id="wishes">
+                <h2 class="section-title">✨ Пожелания</h2>
+                <div class="interactive-cards">
+                    <div class="card" onclick="showWish(this)">
+                        <div class="card-icon">💝</div>
+                        <h3 class="card-title">От всего сердца</h3>
+                        <p class="card-content">Дорогой Никита! Желаю тебе бесконечного счастья, чтобы каждый твой день был наполнен радостью и любовью. Пусть твоя улыбка никогда не гаснет!</p>
+                    </div>
+                    <div class="card" onclick="showWish(this)">
+                        <div class="card-icon">🚀</div>
+                        <h3 class="card-title">Успехов и достижений</h3>
+                        <p class="card-content">Пусть все твои мечты станут реальностью! Желаю тебе покорить все вершины, которые ты себе наметил. Ты способен на великие дела!</p>
+                    </div>
+                    <div class="card" onclick="showWish(this)">
+                        <div class="card-icon">🎉</div>
+                        <h3 class="card-title">Праздника каждый день</h3>
+                        <p class="card-content">Пусть жизнь будет яркой и интересной! Желаю тебе незабываемых приключений, новых открытий и моментов, от которых захватывает дух!</p>
+                    </div>
+                    <div class="card" onclick="showWish(this)">
+                        <div class="card-icon">👨‍👩‍👧‍👦</div>
+                        <h3 class="card-title">Верных друзей</h3>
+                        <p class="card-content">Желаю тебе всегда быть в окружении настоящих, верных и искренних друзей! Пусть рядом будут те, кто поддержит, поймёт и разделит с тобой все радости и трудности жизни.</p>
+                    </div>
+                    <div class="card" onclick="showWish(this)">
+                        <div class="card-icon">🌍</div>
+                        <h3 class="card-title">Путешествий</h3>
+                        <p class="card-content">Пусть ты увидишь весь мир! Желаю тебе побывать в самых красивых уголках планеты и собрать коллекцию незабываемых воспоминаний!</p>
+                    </div>
+                    <div class="card" onclick="showWish(this)">
+                        <div class="card-icon">💪</div>
+                        <h3 class="card-title">Здоровья и силы</h3>
+                        <p class="card-content">Желаю тебе крепкого здоровья, неиссякаемой энергии и силы духа! Пусть твое тело будет таким же сильным, как твой характер!</p>
+                    </div>
+                </div>
+                <div class="action-buttons" style="position: relative;">
+                    <button class="action-btn" onclick="showRandomWish()">
+                        <i class="fas fa-magic"></i> Случайное пожелание
+                    </button>
+                    <img src="assets/nikita_pechenka.png" class="hidden-nikita" style="position: absolute; top: 50%; left: 100px; width: 26px; height: 26px; transform: translateY(-50%); opacity: 0.7;" onclick="findNikita(this, 6)" alt="Найди Никиту!">
+                </div>
+                <img src="assets/nikita_pechenka.png" class="hidden-nikita" style="bottom: 20%; right: 15%; width: 38px; height: 38px;" onclick="findNikita(this, 7)" alt="Найди Никиту!">
+            </section>
+
+            <div class="modal" id="specialModal">
+                <div class="modal-content">
+                    <button class="modal-close" onclick="closeModal()">&times;</button>
+                    <h2>🎂 Особое пожелание для Никиты! 🎉</h2>
+                    <p>Дорогой Никита! В этот особенный день хочу пожелать тебе всего самого лучшего! Ты удивительный человек, и я очень рад, что ты есть в моей жизни. Пусть каждый твой день будет наполнен радостью, успехами и любовью! С Днем Рождения! 🎈</p>
+                    <img src="assets/nikita_pechenka.png" class="hidden-nikita" style="position: absolute; bottom: 20px; right: 30px; width: 32px; height: 32px; z-index: 10;" onclick="findNikita(this, 1)" alt="Найди Никиту!">
+                </div>
+            </div>
+
+            <div class="floating-elements" id="floatingElements"></div>
+
+            <div class="quest-progress" id="questProgress">
+                <h2>🎯 Квест: Найди Никиту!</h2>
+                <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #666;">Найди все 7 спрятанных картинок Никиты по всему сайту!</p>
+                <div class="quest-item" data-id="1">
+                    <span class="quest-checkbox">1</span>
+                    <span>Картинка 1 найдена</span>
+                </div>
+                <div class="quest-item" data-id="2">
+                    <span class="quest-checkbox">2</span>
+                    <span>Картинка 2 найдена</span>
+                </div>
+                <div class="quest-item" data-id="3">
+                    <span class="quest-checkbox">3</span>
+                    <span>Картинка 3 найдена</span>
+                </div>
+                <div class="quest-item" data-id="4">
+                    <span class="quest-checkbox">4</span>
+                    <span>Картинка 4 найдена</span>
+                </div>
+                <div class="quest-item" data-id="5">
+                    <span class="quest-checkbox">5</span>
+                    <span>Картинка 5 найдена</span>
+                </div>
+                <div class="quest-item" data-id="6">
+                    <span class="quest-checkbox">6</span>
+                    <span>Картинка 6 найдена</span>
+                </div>
+                <div class="quest-item" data-id="7">
+                    <span class="quest-checkbox">7</span>
+                    <span>Картинка 7 найдена</span>
+                </div>
+                <div id="qrButton" style="display: none; margin-top: 1rem;">
+                    <button class="action-btn" onclick="showQRCode()" style="width: 100%;">
+                        <i class="fas fa-qrcode"></i> Показать QR-код
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для просмотра фото -->
+    <div id="photoModal" class="photo-modal">
+        <button class="photo-modal-close" id="photoModalClose">&times;</button>
+        <button class="photo-modal-arrow left" id="photoModalPrev">&#8592;</button>
+        <img id="photoModalImg" src="" alt="Фото" />
+        <button class="photo-modal-arrow right" id="photoModalNext">&#8594;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
